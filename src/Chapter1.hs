@@ -539,6 +539,7 @@ mid x y z
   | x > y && x > z = if y > z then y else z
   | y > x && y > z = if x > z then x else z
   | z > x && z > y = if x > y then x else y
+  | y == z = y
   | otherwise = x
 
 -- |

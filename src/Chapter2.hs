@@ -327,12 +327,13 @@ When working with lists, the most practical module will be "Data.List":
 -- ghci> :l src/Chapter2.hs
 subList :: Int -> Int -> [a] -> [a]
 subList _ _ [] = []
+subList 0 0 (x : _) = [x]
 subList _ 0 _ = []
 subList start end list
   | start < 0 = []
   | end < 0 = []
   | end < start = []
-  | end >= length list = []
+  | end >= length list = list
   | otherwise = slice start end list
   where
     slice from to xs = take (to - from + 1) $ drop from xs
