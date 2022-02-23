@@ -57,9 +57,9 @@ jobs:
         path: ~/.cabal/store
         key: ${{ runner.os }}-${{ matrix.ghc }}-cabal
 
-    - name: Chapter 1 - Doctest
-      run: |
-        cabal v2-test doctest-chapter1 --enable-tests --test-show-details=direct
+    # - name: Chapter 1 - Doctest
+    #   run: |
+    #     cabal v2-test doctest-chapter1 --enable-tests --test-show-details=direct
 
     - name: Chapter 1 - Tests
       run: |
@@ -92,9 +92,9 @@ jobs:
         path: ~/.cabal/store
         key: ${{ runner.os }}-${{ matrix.ghc }}-cabal
 
-    - name: Chapter 2 - Doctest
-      run: |
-        cabal v2-test doctest-chapter2 --enable-tests --test-show-details=direct
+    # - name: Chapter 2 - Doctest
+    #   run: |
+    #     cabal v2-test doctest-chapter2 --enable-tests --test-show-details=direct
 
     - name: Chapter 2 - Tests
       run: |
@@ -153,9 +153,9 @@ jobs:
         path: ~/.cabal/store
         key: ${{ runner.os }}-${{ matrix.ghc }}-cabal
 
-    - name: Chapter 4 - Doctest
-      run: |
-        cabal v2-test doctest-chapter4 --enable-tests --test-show-details=direct
+    # - name: Chapter 4 - Doctest
+    #   run: |
+    #     cabal v2-test doctest-chapter4 --enable-tests --test-show-details=direct
 
     - name: Chapter 4 - Tests
       run: |
