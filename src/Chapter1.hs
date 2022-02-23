@@ -536,8 +536,9 @@ closestToZero x y = if min (abs x) (abs y) == abs x then x else y
 -- Casual reminder about adding top-level type signatures for all functions :)
 mid :: Ord a => a -> a -> a -> a
 mid x y z
-  | max x (max y z) == x = if y > z then y else z
-  | max x (max y z) == y = if z > x then z else x
+  | x > y && x > z = if y > z then y else z
+  | y > x && y > z = if x > z then x else z
+  | z > x && z > y = if x > y then x else y
   | otherwise = x
 
 -- |
